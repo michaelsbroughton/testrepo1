@@ -1,0 +1,23 @@
+pipeline{
+agent any
+triggers {
+  pollSCM "* * * * *"
+  }
+stages {
+  stage("Build") {
+    steps {
+      echo "We build here"
+      }
+    }
+   stage("Unit Test") {
+    steps {
+      echo "We unit test here"
+    }
+   }
+   stage("Create Docker Image") {
+    steps {
+      echo "We create Docker image and publish"
+    }
+   }
+   }
+}

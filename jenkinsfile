@@ -23,6 +23,6 @@ stages {
    post {
       always {
         deleteDir()
-        {
-      }
+        }
+    }
 }

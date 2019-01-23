@@ -12,12 +12,17 @@ stages {
    stage("Unit Test") {
     steps {
       echo "We unit test here"
+      }
     }
-   }
    stage("Create Docker Image") {
     steps {
-      echo "We create Docker image and publish"
+      echo "We create Docker image and publish to Google"
+      }
+     }
+   }
+   post {
+      always {
+        deleteDir()
+        }
     }
-   }
-   }
 }

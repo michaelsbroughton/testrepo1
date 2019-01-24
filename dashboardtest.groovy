@@ -9,7 +9,9 @@ pipeline {
 	environment {}
 	stages {
 	    stage('Deploy') {
-	        echo 'Deploying ${params.Product} v${params.Version} to ${params.Customer} ${params.Stack} stack'
+		    steps {
+			    echo 'Deploying ${params.Product} v${params.Version} to ${params.Customer} ${params.Stack} stack'
+		    }
 	    }
 	}
 }

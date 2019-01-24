@@ -6,7 +6,6 @@ pipeline {
 	    string (name: 'Version', defaultValue: 'Enter version X.X.X.X (i.e. 4.2.0.15)', description: 'Version including build to deploy', trim: true)
 	    }
 	agent any
-	environment {}
 	stages {
 	    stage('Deploy') {
 		    steps {
